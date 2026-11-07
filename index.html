@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahir Malick - IT Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cursor glow effect -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="Home">
+        <span class="nav__logo-bracket">{</span>MM<span class="nav__logo-bracket">}</span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" role="list">
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#experience" data-nav>Experience</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
+    <div class="hero__particles" aria-hidden="true">
+      <canvas id="particleCanvas"></canvas>
+    </div>
+    <div class="hero__content">
+      <p class="hero__greeting">
+        <span class="typewriter" data-text='["Hello, I am"]'></span>
+      </p>
+      <h1 class="hero__name glitch" data-text="Mahir Malick">Mahir Malick</h1>
+      <p class="hero__title">
+        <span class="hero__title-static">IT Professional</span>
+        <span class="hero__title-divider">|</span>
+        <span class="hero__title-rotate" id="rotatingTitle"></span>
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">
+          <span>View My Work</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <div class="hero__scroll-mouse">
+        <div class="hero__scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section about" data-reveal>
+    <div class="container">
+      <h2 class="section__heading">
+        <span class="section__number">01.</span> About Me
+      </h2>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>I'm a senior at the <strong>University of Central Florida</strong> pursuing a B.S. in Information Technology, graduating December 2026. I hold a <strong>CompTIA Tech+</strong> certification and I'm currently studying for <strong>Security+</strong> and <strong>AZ-900</strong>.</p>
+          <p>My focus is on systems administration, cybersecurity, and IT infrastructure. I've built Active Directory environments from scratch, analyzed network traffic with Wireshark, deployed multi-tier web applications, and developed security automation scripts - all through hands-on lab work and real projects.</p>
+          <p>I'm looking for opportunities where I can apply my technical skills in IT operations, security, or infrastructure roles.</p>
+        </div>
+        <div class="about__details">
+          <ul class="about__info-list">
+            <li>
+              <span class="about__info-label">Location</span>
+              <span class="about__info-value">Coral Springs, FL</span>
+            </li>
+            <li>
+              <span class="about__info-label">University</span>
+              <span class="about__info-value">UCF - Orlando</span>
+            </li>
+            <li>
+              <span class="about__info-label">Degree</span>
+              <span class="about__info-value">B.S. Information Technology</span>
+            </li>
+            <li>
+              <span class="about__info-label">Graduation</span>
+              <span class="about__info-value">December 2026</span>
+            </li>
+            <li>
+              <span class="about__info-label">Certification</span>
+              <span class="about__info-value">CompTIA Tech+</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills" data-reveal>
+    <div class="container">
+      <h2 class="section__heading">
+        <span class="section__number">02.</span> Skills & Technologies
+      </h2>
+      <div class="skills__grid">
+        <article class="skill-card" data-tilt>
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3 class="skill-card__title">Systems & Networking</h3>
+          <div class="skill-card__tags">
+            <span class="tag">Active Directory</span>
+            <span class="tag">Windows Server</span>
+            <span class="tag">Group Policy</span>
+            <span class="tag">DNS</span>
+            <span class="tag">TCP/IP</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">VirtualBox</span>
+            <span class="tag">Cisco Packet Tracer</span>
+          </div>
+        </article>
+        <article class="skill-card" data-tilt>
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+          </div>
+          <h3 class="skill-card__title">Languages</h3>
+          <div class="skill-card__tags">
+            <span class="tag">Java</span>
+            <span class="tag">Python</span>
+            <span class="tag">PowerShell</span>
+            <span class="tag">SQL</span>
+            <span class="tag">C</span>
+            <span class="tag">Bash</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </article>
+        <article class="skill-card" data-tilt>
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3 class="skill-card__title">Web & Database</h3>
+          <div class="skill-card__tags">
+            <span class="tag">Apache Tomcat</span>
+            <span class="tag">JDBC</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Jakarta EE</span>
+            <span class="tag">JSP</span>
+            <span class="tag">Git</span>
+          </div>
+        </article>
+        <article class="skill-card" data-tilt>
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="skill-card__title">Security</h3>
+          <div class="skill-card__tags">
+            <span class="tag">CompTIA Tech+</span>
+            <span class="tag">RSA/Diffie-Hellman</span>
+            <span class="tag">Packet Analysis</span>
+            <span class="tag">Vulnerability Assessment</span>
+            <span class="tag">Network Hardening</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects" data-reveal>
+    <div class="container">
+      <h2 class="section__heading">
+        <span class="section__number">03.</span> Projects
+      </h2>
+      <div class="projects__grid">
+
+        <article class="project-card" data-reveal-child>
+          <div class="project-card__header">
+            <svg class="project-card__folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+            <div class="project-card__links">
+              <a href="https://mytern.netlify.app" target="_blank" rel="noopener noreferrer" aria-label="View live site">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">MyTern</h3>
+          <p class="project-card__subtitle">Internship & Job Application Tracker</p>
+          <p class="project-card__description">A web app that tracks applications across Indeed, LinkedIn, Glassdoor, and Handshake. Features resume version tracking, interview question logging with opt-in peer sharing, and user research-driven design from 6 interviews.</p>
+          <ul class="project-card__tech">
+            <li>Team Project</li>
+            <li>User Research</li>
+            <li>Netlify</li>
+          </ul>
+        </article>
+
+        <article class="project-card" data-reveal-child>
+          <div class="project-card__header">
+            <svg class="project-card__folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+          </div>
+          <h3 class="project-card__title">Three-Tier Web Application</h3>
+          <p class="project-card__subtitle">Enterprise Distributed System</p>
+          <p class="project-card__description">Built a distributed enterprise app on Apache Tomcat 11 with four role-based interfaces backed by MySQL 8. Wrote 11 Java servlets with parameterized queries preventing SQL injection and 5 stored procedures for reporting.</p>
+          <ul class="project-card__tech">
+            <li>Java</li>
+            <li>Tomcat</li>
+            <li>MySQL</li>
+            <li>JDBC</li>
+            <li>JSP</li>
+          </ul>
+        </article>
+
+        <article class="project-card" data-reveal-child>
+          <div class="project-card__header">
+            <svg class="project-card__folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+          </div>
+          <h3 class="project-card__title">Active Directory Lab</h3>
+          <p class="project-card__subtitle">Automated Task Management</p>
+          <p class="project-card__description">Configured a 3-VM Windows Server 2025 / Windows 11 network with AD DS, DNS, and a multi-OU domain. Authored PowerShell scripts for cross-host automation that execute on user logon.</p>
+          <ul class="project-card__tech">
+            <li>Windows Server</li>
+            <li>Active Directory</li>
+            <li>PowerShell</li>
+            <li>VirtualBox</li>
+          </ul>
+        </article>
+
+        <article class="project-card" data-reveal-child>
+          <div class="project-card__header">
+            <svg class="project-card__folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+          </div>
+          <h3 class="project-card__title">Network Packet Analysis</h3>
+          <p class="project-card__subtitle">Protocol Inspection & Security</p>
+          <p class="project-card__description">Captured and analyzed live HTTP traffic in Wireshark. Applied RSA and Diffie-Hellman cryptographic algorithms to validate communications and documented vulnerabilities with hardening recommendations.</p>
+          <ul class="project-card__tech">
+            <li>Wireshark</li>
+            <li>TCP/IP</li>
+            <li>RSA</li>
+            <li>Diffie-Hellman</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience" data-reveal>
+    <div class="container">
+      <h2 class="section__heading">
+        <span class="section__number">04.</span> Experience
+      </h2>
+      <div class="timeline">
+        <div class="timeline__item" data-reveal-child>
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <h3>Retail Sales Manager</h3>
+              <span class="timeline__date">Jan 2022 - Dec 2022</span>
+            </div>
+            <p class="timeline__company">Kwik Stop &mdash; Pompano Beach, FL</p>
+            <ul class="timeline__details">
+              <li>Managed daily operations for a high-traffic convenience store - customer service, cash handling, inventory control</li>
+              <li>Trained employees, conducted daily income reconciliation, ensured compliance with store policies</li>
+              <li>Monitored stock levels, organized displays, and prepared bank deposits</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline__item" data-reveal-child>
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <h3>Teaching Assistant</h3>
+              <span class="timeline__date">Jan 2022 - Jun 2022</span>
+            </div>
+            <p class="timeline__company">Kumon Learning Center</p>
+            <ul class="timeline__details">
+              <li>Tutored elementary-aged students in mathematics and reading comprehension</li>
+              <li>Tracked progress against individualized learning goals across weekly sessions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact" data-reveal>
+    <div class="container container--narrow">
+      <h2 class="section__heading">
+        <span class="section__number">05.</span> Get In Touch
+      </h2>
+      <p class="contact__text">I'm currently looking for IT internship and entry-level opportunities in systems administration, cybersecurity, and IT infrastructure. Feel free to reach out!</p>
+      <div class="contact__links">
+        <a href="mailto:mahirthemalick@gmail.com" class="btn btn--primary btn--lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          <span>Say Hello</span>
+        </a>
+        <a href="https://www.linkedin.com/in/mahir-malick-997994242" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Designed & Built by Mahir Malick</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
